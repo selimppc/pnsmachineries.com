@@ -55,16 +55,16 @@ class nl_handler
 			return $r;
 			}
 
-		if (isset($r['regrinfo']['tech']))
-			$r['regrinfo']['tech'] = $this->get_contact($r['regrinfo']['tech']);
+		if (isset($r['regrinfo']['tech']))
+			$r['regrinfo']['tech'] = $this->get_contact($r['regrinfo']['tech']);
 
-		if (isset($r['regrinfo']['zone']))
+		if (isset($r['regrinfo']['zone']))
 			$r['regrinfo']['zone'] = $this->get_contact($r['regrinfo']['zone']);
-					
-		if (isset($r['regrinfo']['admin']))
-			$r['regrinfo']['admin'] = $this->get_contact($r['regrinfo']['admin']);
-				
-		if (isset($r['regrinfo']['owner']))
+					
+		if (isset($r['regrinfo']['admin']))
+			$r['regrinfo']['admin'] = $this->get_contact($r['regrinfo']['admin']);
+				
+		if (isset($r['regrinfo']['owner']))
 			$r['regrinfo']['owner'] = $this->get_contact($r['regrinfo']['owner']);
 
 		$r['regrinfo']['registered'] = 'yes';

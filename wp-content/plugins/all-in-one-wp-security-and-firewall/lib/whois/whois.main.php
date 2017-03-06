@@ -109,7 +109,7 @@ class Whois extends WhoisClient
 			$ip = @gethostbyname($query);
 
 			if (isset($this->WHOIS_SPECIAL['ip']))
-				{
+				{
 				$this->Query['server'] = $this->WHOIS_SPECIAL['ip'];
 				$this->Query['args'] = $ip;
 				}
@@ -133,7 +133,7 @@ class Whois extends WhoisClient
 			$ip = @gethostbyname($query);
 
 			if (isset($this->WHOIS_SPECIAL['ip']))
-				{
+				{
 				$this->Query['server'] = $this->WHOIS_SPECIAL['ip'];
 				}
 			else

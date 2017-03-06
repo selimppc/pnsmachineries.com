@@ -146,7 +146,7 @@ $this->WHOIS_GTLD_HANDLER = array(
 		'whois.tucows.com'					=> 'opensrs',
 		'whois.35.com'						=> 'onlinenic',
 		'whois.nominalia.com'				=> 'genericb',
-		'whois.encirca.com'					=> 'genericb',
+		'whois.encirca.com'					=> 'genericb',
 		'whois.corenic.net'					=> 'genericb'
 		);
 
