@@ -1,0 +1,3 @@
+[08-Jan-2017 15:40:35 America/Denver] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home/pnsmachi/public_html/pnsmachineries/wp-includes/functions.php on line 8
+[08-Jan-2017 15:40:35 America/Denver] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home/pnsmachi/public_html/pnsmachineries/wp-includes/functions.php on line 8
+[08-Jan-2017 15:40:35 America/Denver] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/pnsmachi/public_html/pnsmachineries/wp-includes/functions.php on line 8

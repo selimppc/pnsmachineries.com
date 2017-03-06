@@ -1,0 +1,2 @@
+[21-Oct-2016 12:18:43 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home/pnsmachi/public_html/pnsmachineries/wp-content/themes/twentyfourteen/404.php on line 10
+[04-Jan-2017 01:48:31 America/Denver] PHP Fatal error:  Call to undefined function get_header() in /home/pnsmachi/public_html/pnsmachineries/wp-content/themes/twentyfourteen/404.php on line 10

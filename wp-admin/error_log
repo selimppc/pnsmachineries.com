@@ -1,0 +1,11 @@
+[21-Sep-2015 04:14:15 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/pnsmachi/public_html/pnsmachineries/wp-content/themes/pnsmachine/framework/php/class-framework-widgets.php on line 581
+[21-Sep-2015 04:14:36 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/pnsmachi/public_html/pnsmachineries/wp-content/themes/pnsmachine/framework/php/class-framework-widgets.php on line 581
+[14-May-2016 04:28:03 UTC] PHP Warning:  Creating default object from empty value in /home/pnsmachi/public_html/pnsmachineries/wp-content/plugins/wp-rocket/inc/functions/options.php on line 419
+[13-Jun-2016 05:10:28 UTC] PHP Warning:  Creating default object from empty value in /home/pnsmachi/public_html/pnsmachineries/wp-content/plugins/wp-rocket/inc/functions/options.php on line 419
+[14-Aug-2016 05:44:33 UTC] PHP Warning:  Creating default object from empty value in /home/pnsmachi/public_html/pnsmachineries/wp-content/plugins/wp-rocket/inc/functions/options.php on line 419
+[06-Oct-2016 08:56:28 UTC] PHP Warning:  Creating default object from empty value in /home/pnsmachi/public_html/pnsmachineries/wp-content/plugins/wp-rocket/inc/functions/options.php on line 419
+[09-Nov-2016 00:19:58 UTC] PHP Warning:  Creating default object from empty value in /home/pnsmachi/public_html/pnsmachineries/wp-content/plugins/wp-rocket/inc/functions/options.php on line 419
+[16-Dec-2016 13:21:33 UTC] PHP Warning:  Creating default object from empty value in /home/pnsmachi/public_html/pnsmachineries/wp-content/plugins/wp-rocket/inc/functions/options.php on line 419
+[08-Jan-2017 15:21:59 America/Denver] PHP Fatal error:  Call to undefined function __() in /home/pnsmachi/public_html/pnsmachineries/wp-admin/menu.php on line 23
+[25-Jan-2017 15:28:09 UTC] PHP Warning:  Creating default object from empty value in /home/pnsmachi/public_html/pnsmachineries/wp-content/plugins/wp-rocket/inc/functions/options.php on line 419
+[25-Feb-2017 05:00:43 UTC] PHP Warning:  Creating default object from empty value in /home/pnsmachi/public_html/pnsmachineries/wp-content/plugins/wp-rocket/inc/functions/options.php on line 419
