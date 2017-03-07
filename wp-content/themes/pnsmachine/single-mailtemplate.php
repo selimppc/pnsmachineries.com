@@ -97,22 +97,26 @@
 	$mail_data .= '</table>';
 
 
-		$multiple_recipients = array(
-		    'mithun.cse521@gmail.com',
-		    'ad.mithun@gmail.com'
-		);
-
-		$headers = array('Content-Type: text/html; charset=UTF-8');
-
-		$subj = 'The email subject';
-		$body = 'This is the body of the email';
-		if(wp_mail( $multiple_recipients, $subj, $mail_data,$headers )){
-			echo 'Send';
-		}else{
-			echo 'not send';
-		}
+		
 
 		endwhile;
 	endif;
+
+	$multiple_recipients = array(
+		    $basic_fields[0]['recipients-mail']
+		);
+
+
+		$headers  = "MIME-Version: 1.0" . "\r\n";
+		$headers .= "Content-Type: text/html; charset=UTF-8";
+		$headers .= "From: PNS Group <info@pnsmachineries.com>" . "\r\n";
+
+		$subj = 'PNS Machineries';
+		if(wp_mail( $multiple_recipients, $subj, $mail_data,$headers )){
+			echo 'Mail Send';
+		}else{
+			echo 'Mail not send';
+		}
+
 
 ?>
