@@ -13,7 +13,14 @@
 			$second_block = array_slice($product_data_r,3,3);
 			$third_block = array_slice($product_data_r,6,3);
 
-			echo '2';
+			$mail_data = '';
+			$mail_data .= '<table border="0" cellpadding="10" cellspacing="0" style="width:100%;font-family:arial;margin:auto;">';
+
+				$mail_data .= '<tr><td colspan="3" ><img style="width:100%;height:200px;" src="'.$banner_image['0'].'"></td></tr>';
+
+			$mail_data .= '</table>';
+
+			echo $mail_data;
 
 		endwhile;
 	endif;
