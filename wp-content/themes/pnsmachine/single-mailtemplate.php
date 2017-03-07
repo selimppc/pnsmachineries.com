@@ -97,39 +97,39 @@
 
 			echo $mail_data;
 
-			// $multiple_recipients = array(
-			//     $basic_fields[0]['recipients-mail']
-			// );
+			$multiple_recipients = array(
+			    $basic_fields[0]['recipients-mail']
+			);
 
 
-			// $headers  = "MIME-Version: 1.0" . "\r\n";
-			// $headers .= "Content-Type: text/html; charset=UTF-8";
-			// $headers .= "From: PNS Group <info@pnsmachineries.com>" . "\r\n";
+			$headers  = "MIME-Version: 1.0" . "\r\n";
+			$headers .= "Content-Type: text/html; charset=UTF-8";
+			$headers .= "From: PNS Group <info@pnsmachineries.com>" . "\r\n";
 
-			// $subj = 'PNS Machineries';
-			// if(wp_mail( $multiple_recipients, $subj, $mail_data,$headers )){
-			// 	echo 'Mail Send';
-			// }else{
-			// 	echo 'Mail not send';
-			// }
+			$subj = 'PNS Machineries';
+			if(wp_mail( $multiple_recipients, $subj, $mail_data,$headers )){
+				echo 'Mail Send';
+			}else{
+				echo 'Mail not send';
+			}
 
 			// Always set content-type when sending HTML email
 
-			$to = "mithun.cse521@gmail.com";
-			$subject = "HTML email";
+			// $to = "mithun.cse521@gmail.com";
+			// $subject = "HTML email";
 
-			$headers = "MIME-Version: 1.0" . "\r\n";
-			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+			// $headers = "MIME-Version: 1.0" . "\r\n";
+			// $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
-			// More headers
-			$headers .= 'From: <webmaster@example.com>' . "\r\n";
-			$headers .= 'Cc: myboss@example.com' . "\r\n";
+			// // More headers
+			// $headers .= 'From: <webmaster@example.com>' . "\r\n";
+			// $headers .= 'Cc: myboss@example.com' . "\r\n";
 
-			if(mail($to,$subject,'hello',$headers)){
-				echo 'okk';
-			}else{
-				echo 'not ook';
-			}
+			// if(mail($to,$subject,'hello',$headers)){
+			// 	echo 'okk';
+			// }else{
+			// 	echo 'not ook';
+			// }
 
 		endwhile;
 	endif;
