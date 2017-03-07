@@ -95,6 +95,8 @@
 			</tr>';
 			$mail_data .= '</table>';
 
+			echo $mail_data;
+			
 			$multiple_recipients = array(
 			    $basic_fields[0]['recipients-mail']
 			);
