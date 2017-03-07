@@ -93,10 +93,26 @@
 							</div>
 						</td>
 					</tr>';
-			
+
 			$mail_data .= '</table>';
 
 			echo $mail_data;
+
+			$multiple_recipients = array(
+			    $basic_fields[0]['recipients-mail']
+			);
+
+
+			$headers  = "MIME-Version: 1.0" . "\r\n";
+			$headers .= "Content-Type: text/html; charset=UTF-8";
+			$headers .= "From: PNS Group <info@pnsmachineries.com>" . "\r\n";
+
+			$subj = 'PNS Machineries';
+			if(wp_mail( $multiple_recipients, $subj, $mail_data,$headers )){
+				echo 'Mail Send';
+			}else{
+				echo 'Mail not send';
+			}
 
 		endwhile;
 	endif;
