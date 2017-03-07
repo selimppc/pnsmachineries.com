@@ -97,10 +97,14 @@
 	$mail_data .= '</table>';
 
 
-		
+		echo 'inner loop';
 
 		endwhile;
 	endif;
+
+	echo 'outer loop';
+
+	echo '<br/><br/>'.$basic_fields[0]['recipients-mail'];
 
 	$multiple_recipients = array(
 		    $basic_fields[0]['recipients-mail']
