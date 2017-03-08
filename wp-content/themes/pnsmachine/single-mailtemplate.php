@@ -102,26 +102,26 @@
 		endwhile;
 	endif;
 
-echo 'Hello';
+echo 'Hello 2';
 echo '<br/>';
 echo $mail_data;
 
-			// $multiple_recipients =  $basic_fields[0]['recipients-mail'];
+			$multiple_recipients =  $basic_fields[0]['recipients-mail'];
 
-			// $multiple_recipients = explode(",",$multiple_recipients);
+			$multiple_recipients = explode(",",$multiple_recipients);
 
-			// foreach($multiple_recipients as $recipients){
+			foreach($multiple_recipients as $recipients){
 				
-			// 	$headers  = "MIME-Version: 1.0" . "\r\n";
-			// 	$headers .= "Content-Type: text/html; charset=UTF-8";
-			// 	$headers .= "From: PNS Group <info@pnsmachineries.com>" . "\r\n";
+				$headers  = "MIME-Version: 1.0" . "\r\n";
+				$headers .= "Content-Type: text/html; charset=UTF-8";
+				$headers .= "From: PNS Group <info@pnsmachineries.com>" . "\r\n";
 
-			// 	$subj = 'PNS Machineries';
-			// 	if(wp_mail( $recipients, $subj, $mail_data,$headers )){
-			// 		echo 'Mail Send';
-			// 	}else{
-			// 		echo 'Mail not send';
-			// 	}
-			// }
+				$subj = 'PNS Machineries';
+				if(wp_mail( $recipients, $subj, $mail_data,$headers )){
+					echo 'Mail Send';
+				}else{
+					echo 'Mail not send';
+				}
+			}
 
 ?>
