@@ -26,8 +26,7 @@
 
 		$mail_data .= '<tr>
 						<td colspan="3" style="    border-bottom: 1px solid #ccc;">
-							<div style="color: #0c4da2;font-weight: bold;text-align: center;font-size: 16px;  margin-top: 20px;">'.$basic_fields[0]['header-top'].'</div>
-							<div style="color: #00a651;font-weight: bold;text-align: center;font-size: 18px;margin-top: 20px;margin-bottom: 30px;">'.$basic_fields[0]['header-bottom'].'</div>
+							<div style="color: #00a651;font-weight: bold;text-align: center;font-size: 18px;margin-top: 20px;margin-bottom: 30px;">'.$basic_fields[0]['header'].'</div>
 						</td>
 					   </tr>';
 
@@ -42,6 +41,7 @@
 								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Age:</span><span style="float:right;">'.$fbp['age'].'</span></div>
 								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Max size:</span><span style="float:right;">'.$fbp['max-size'].'</span></div>
 								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Color:</span><span style="float:right;">'.$fbp['color'].'</span></div>
+								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Price:</span><span style="float:right;">'.$fbp['price'].'</span></div>
 								<img style="width:100%;height:150px;padding:5px;" src="'.$image['0'].'">
 							</a></td>';
 						}
@@ -102,8 +102,6 @@
 		endwhile;
 	endif;
 
-echo 'Hello 2';
-echo '<br/>';
 echo $mail_data;
 
 			$multiple_recipients =  $basic_fields[0]['recipients-mail'];
@@ -112,16 +110,21 @@ echo $mail_data;
 
 			foreach($multiple_recipients as $recipients){
 				
-				$headers  = "MIME-Version: 1.0" . "\r\n";
-				$headers .= "Content-Type: text/html; charset=UTF-8";
-				$headers .= "From: PNS Group <info@pnsmachineries.com>" . "\r\n";
+				$to = $recipients;
+				$subject = "PNS Machineries";
+				// Always set content-type when sending HTML email
+				$headers = "MIME-Version: 1.0" . "\r\n";
+				$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
-				$subj = 'PNS Machineries';
-				if(wp_mail( $recipients, $subj, $mail_data,$headers )){
-					echo 'Mail Send';
+				// More headers
+				$headers .= 'From: <info@pnsmachineries.com>' . "\r\n";
+
+				if(mail($to,$subject,$mail_data,$headers)){
+					echo '<br/><br/>Mail Send to :: '.$recipients;
 				}else{
-					echo 'Mail not send';
+					echo 'not send';
 				}
+
 			}
 
 ?>
