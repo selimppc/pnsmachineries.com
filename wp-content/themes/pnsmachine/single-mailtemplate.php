@@ -14,13 +14,13 @@
 			$third_block = array_slice($product_data_r,6,3);
 
 			$mail_data = '';
-			$mail_data .= '<table border="0" cellpadding="10" cellspacing="0" style="width:100%;font-family:arial;margin:auto;">';
+			$mail_data .= '<table border="0" cellpadding="10" cellspacing="0" style="width:800px;font-family:arial;margin:auto;">';
 
 				$mail_data .= '<tr><td colspan="3" ><img style="width:100%;height:200px;" src="'.$banner_image['0'].'"></td></tr>';
 
 				$mail_data .= '<tr><td colspan="3" style="    border-bottom: 1px solid #ccc;">
 						<div style="color: #00a651;float: left;">Newsletter '.Date('Y-F-d').' </div>
-						<a style="color: #00a651;float: right;" href="http://www.pnsmachineries.com/">Click here to see our stock list</a>
+						<a style="color: #00a651;float: right;" href="http://www.pnsmachineries.com/stock">Click here to see our stock list</a>
 						</td>
 					  </tr>';
 
@@ -41,7 +41,7 @@
 								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Age:</span><span style="float:right;">'.$fbp['age'].'</span></div>
 								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Max size:</span><span style="float:right;">'.$fbp['max-size'].'</span></div>
 								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Color:</span><span style="float:right;">'.$fbp['color'].'</span></div>
-								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Price:</span><span style="float:right;">'.$fbp['price'].'</span></div>
+								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 15px;    display: inline-block;width:100%;background: #0b3a66;color: #fff;font-weight: bold;"><span style="float:left;">Price:</span><span style="float:right;">'.$fbp['price'].'</span></div>
 								<img style="width:100%;height:150px;padding:5px;" src="'.$image['0'].'">
 							</a></td>';
 						}
@@ -59,6 +59,7 @@
 								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Age:</span><span style="float:right;">'.$sbp['age'].'</span></div>
 								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Max size:</span><span style="float:right;">'.$sbp['max-size'].'</span></div>
 								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Color:</span><span style="float:right;">'.$sbp['color'].'</span></div>
+								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 15px;    display: inline-block;width:100%;background: #0b3a66;color: #fff;font-weight: bold;"><span style="float:left;">Price:</span><span style="float:right;">'.$sbp['price'].'</span></div>
 								<img style="width:100%;height:150px;padding:5px;" src="'.$image1['0'].'">
 							</a></td>';
 						}
@@ -76,6 +77,7 @@
 								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Age:</span><span style="float:right;">'.$tbp['age'].'</span></div>
 								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Max size:</span><span style="float:right;">'.$tbp['max-size'].'</span></div>
 								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Color:</span><span style="float:right;">'.$tbp['color'].'</span></div>
+								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 15px;    display: inline-block;width:100%;background: #0b3a66;color: #fff;font-weight: bold;"><span style="float:left;">Price:</span><span style="float:right;">'.$tbp['price'].'</span></div>
 								<img style="width:100%;height:150px;padding:5px;" src="'.$image2['0'].'">
 							</a></td>';
 						}
@@ -83,10 +85,7 @@
 			}
 
 			$mail_data .= '<tr>
-				<td colspan="3" style="border-bottom: 1px solid #ccc;margin-top:40px;">
-					<div style="padding-right:20px;float: left;margin-top: 40px;">More machines-check our </div>
-					<a style="color: #00a651;float: left;margin-top: 40px;" href="http://www.pnsmachineries.com/">sales list</a>
-					
+				<td colspan="3" style="border-bottom: 1px solid #ccc;margin-top:40px;">					
 					<div style="width:100%;display:inline-block;font-size:14px;">
 						<br/>
 						'.$basic_fields[0]['footer-part'].'
@@ -106,25 +105,34 @@ echo $mail_data;
 
 			$multiple_recipients =  $basic_fields[0]['recipients-mail'];
 
-			$multiple_recipients = explode(",",$multiple_recipients);
+			if(!empty($multiple_recipients)){
 
-			foreach($multiple_recipients as $recipients){
-				
-				$to = $recipients;
-				$subject = "PNS Machineries";
-				// Always set content-type when sending HTML email
-				$headers = "MIME-Version: 1.0" . "\r\n";
-				$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+					$multiple_recipients = explode(",",$multiple_recipients);
 
-				// More headers
-				$headers .= 'From: <info@pnsmachineries.com>' . "\r\n";
+					foreach($multiple_recipients as $recipients){
+						
+						$to = $recipients;
+						$subject = "PNS Machineries";
+						// Always set content-type when sending HTML email
+						$headers = "MIME-Version: 1.0" . "\r\n";
+						$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
-				if(mail($to,$subject,$mail_data,$headers)){
-					echo '<br/><br/>Mail Send to :: '.$recipients;
-				}else{
-					echo 'not send';
-				}
+						// More headers
+						$headers .= 'From: <info@pnsmachineries.com>' . "\r\n";
+
+						if(mail($to,$subject,$mail_data,$headers)){
+							echo '<br/><br/>Mail Send to :: '.$recipients;
+						}else{
+							echo 'not send';
+						}
+
+					}
+
+			}else{
+
+				echo 'Recipient list Blank';
 
 			}
+			
 
 ?>

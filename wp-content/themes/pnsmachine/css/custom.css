@@ -3,7 +3,50 @@
 /* General Custom CSS */
 
 
+.page-id-166 .entry-content-wrapper .av_textblock_section{
+	float: left;
+    margin-left: 5%;
+    width: 70%;
+}
+.page-id-166 .entry-content-wrapper .avia-image-container{
+	width: 20%;
+}
+.page-id-166 .entry-content-wrapper .avia-image-container img{
+	width: 100%;
+}
 
+.page-id-166 .entry-content-wrapper .av_textblock_section .avia_textblock  p{
+	padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.page-id-166 .entry-content-wrapper .av_textblock_section .avia_textblock ul{
+	    margin: 5px 0 5px 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.page-id-166 .entry-content-wrapper .av_textblock_section .avia_textblock .avia-button-wrap a{
+	background: transparent;
+    color: #000 !important;
+    border-color: rgba(0, 0, 0, 0.3) !important;
+    border-radius: 0px;
+    padding: 0 0 3px 0;
+}
+
+.page-id-166 .entry-content-wrapper .av_textblock_section .avia_textblock p.request{
+	width: 50%;
+	float: left;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	margin-top: 0;
+	padding-bottom: 4px;
+}
+
+.page-id-166 .entry-content-wrapper .av_textblock_section .avia_textblock .avia-button-wrap {
+	width: 50%;
+	float: left;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
 
 /*
 Desktop Styles

@@ -10,7 +10,7 @@
 	$headers .= 'Cc: myboss@example.com' . "\r\n";
 
 	if(mail($to,$subject,'Test mail',$headers)){
-		echo 'Send';
+		echo 'Sendinggggg';
 	}else{
 		echo 'not send';
 	}
