@@ -37,9 +37,9 @@
 							$mail_data .= '<td style="width:33%;"><a style="text-decoration:none;color:#333;text-align:center;margin-bottom:20px;" href="'.$fbp['product-link'].'">
 								<h2 style="color: #0c4da2;font-size: 16px;margin:10px;">'.$fbp['product-name'].'</h2>
 								<div style="background: #faa61a;color: #fff;padding: 5px;width: 100%;">'.$fbp['special-offer-text'].'</div>
-								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Ref No:</span><span style="float:right;">'.$fbp['ref-no'].'</span></div>
-								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Age:</span><span style="float:right;">'.$fbp['age'].'</span></div>
-								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Max size:</span><span style="float:right;">'.$fbp['max-size'].'</span></div>
+								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Serial No:</span><span style="float:right;">'.$fbp['ref-no'].'</span></div>
+								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Year:</span><span style="float:right;">'.$fbp['age'].'</span></div>
+								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Size:</span><span style="float:right;">'.$fbp['max-size'].'</span></div>
 								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 12px;    display: inline-block;width:100%;"><span style="float:left;">Color:</span><span style="float:right;">'.$fbp['color'].'</span></div>
 								<div style="border-bottom: 1px solid #ccc;padding: 5px;font-size: 15px;    display: inline-block;width:100%;background: #0b3a66;color: #fff;font-weight: bold;"><span style="float:left;">Price:</span><span style="float:right;">'.$fbp['price'].'</span></div>
 								<img style="width:100%;height:150px;padding:5px;" src="'.$image['0'].'">
